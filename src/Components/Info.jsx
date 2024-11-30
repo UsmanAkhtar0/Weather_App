@@ -6,6 +6,7 @@ import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import "./Style/Info.css";
+import { Padding } from "@mui/icons-material";
 
 export default function Info({ info }) {
     const HOT_URL =
@@ -52,9 +53,10 @@ export default function Info({ info }) {
                         >
                             <p>Temperature: {info.temp}&deg;C</p>
                             <p>Humidity: {info.humidity}%</p>
+                            <p>Wind: {info.wind *1.6} km/h </p>
                             <p>Min Temp: {info.tempMin}&deg;C</p>
                             <p>Max Temp: {info.tempMax}&deg;C</p>
-                            <p>
+                            <p  style={{ margin: "0 10px" }}>
                                 The weather is described as{" "}
                                 <b>{info.weather}</b> and feels like{" "}
                                 <b>{info.feelsLike}&deg;C.</b>

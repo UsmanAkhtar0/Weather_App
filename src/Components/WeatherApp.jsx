@@ -6,6 +6,7 @@ export default function WeatherApp() {
     const [weatherInfo, setWeatherInfo] = useState({
         city: "Delhi",
         temp: 24,
+        wind: 2,
         feelsLike: 25,
         tempMin: 20,
         tempMax: 30,

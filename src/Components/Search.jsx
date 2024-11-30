@@ -16,10 +16,12 @@ export default function Search({ updateInfo }) {
                 `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`
             );
             const jsonResponse = await response.json();
+            // console.log(jsonResponse);
 
             return {
                 city: jsonResponse.name,
                 temp: jsonResponse.main.temp,
+                wind: jsonResponse.wind.speed,
                 tempMin: jsonResponse.main.temp_min,
                 tempMax: jsonResponse.main.temp_max,
                 humidity: jsonResponse.main.humidity,
@@ -40,6 +42,7 @@ export default function Search({ updateInfo }) {
         event.preventDefault();
         try {
             const newInfo = await getWeatherInfo();
+            // console.log(newInfo);
             updateInfo(newInfo);
             setCity("");
         } catch (err) {
