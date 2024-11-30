@@ -26,8 +26,8 @@ export default function Info({ info }) {
                             info.humidity > 80
                                 ? RAIN_URL
                                 : info.temp > 15
-                                ? HOT_URL
-                                : COLD_URL
+                                    ? HOT_URL
+                                    : COLD_URL
                         }
                         title="Weather background"
                     />
@@ -53,13 +53,13 @@ export default function Info({ info }) {
                         >
                             <p>Temperature: {info.temp}&deg;C</p>
                             <p>Humidity: {info.humidity}%</p>
-                            <p>Wind: {info.wind *1.6} km/h </p>
+                            <p>Wind: {(info.wind * 1.6).toFixed(2)} km/h</p>
                             <p>Min Temp: {info.tempMin}&deg;C</p>
                             <p>Max Temp: {info.tempMax}&deg;C</p>
-                            <p  style={{ margin: "0 10px" }}>
+                            <p>Feels like: {info.feelsLike}&deg;C</p>
+                            <p>
                                 The weather is described as{" "}
-                                <b>{info.weather}</b> and feels like{" "}
-                                <b>{info.feelsLike}&deg;C.</b>
+                                <b>{info.weather}</b>.
                             </p>
                         </Typography>
                     </CardContent>
