@@ -1,4 +1,6 @@
 # React + Vite
+Live on: [usmanakhtar0.github.io/Weather_app/](usmanakhtar0.github.io/Weather_app/)
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
